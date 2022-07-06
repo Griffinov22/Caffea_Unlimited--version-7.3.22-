@@ -10,40 +10,43 @@ nav {
   display: grid;
   grid-template-columns: 1fr 10fr 10fr;
   border-bottom: 2px solid grey;
+}
 
-  #lion-photo {
-    margin: 0.5vw 5vw;
-    width: 70px;
-    height: 70px;
+nav #lion-photo {
+  margin: 0.5vw 5vw;
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
 
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
-  }
-  h1 {
-    display: flex;
-    align-items: center;
-  }
+nav h1 {
+  display: flex;
+  align-items: center;
+}
 
-  #ordered-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-    align-items: center;
-    li {
-      list-style: none;
-      a {
-        text-decoration: none;
-        color: black;
-        transition: all 0.1s ease-in-out;
-      }
-    }
-    a:hover {
-      color: darkred;
-      font-weight: 800;
-      font-size: 28px;
-    }
-  }
+nav #ordered-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  align-items: center;
+}
+
+nav #ordered-nav li {
+  list-style: none;
+}
+
+nav #ordered-nav li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.1s ease-in-out;
+}
+
+nav #ordered-nav a:hover {
+  color: darkred;
+  font-weight: 800;
+  font-size: 28px;
 }
 
 #photo-section {
@@ -52,48 +55,65 @@ nav {
   position: relative;
   padding: 0px;
 
-  .slide {
+  #slider-caption {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 80vh;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    //animation and timing for switching slides
-    transition: transform 1s;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-  .slide-btn {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    font-size: 5rem;
-    background: none;
-    border: none;
-    //Why does this work?? to center the buttons
-    transform: translateY(-50%) scaleX(-1);
-    //makes the buttons look transparent
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 0 1rem;
-    border-radius: 10%;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 0 2rem;
-  }
-  .slide-btn:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 45vw;
+    top: 10%;
+    right: 10vw;
+    text-align: right;
+    z-index: 3;
+    font-size: 4rem;
+    font-weight: 800;
     color: white;
-  }
-  #right-slider-btn {
-    right: 0;
-    transform: translateY(-50%);
+    opacity: 1;
+    transition: opacity 2s;
   }
 }
+
+#photo-section .slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: transform 1s;
+}
+
+#photo-section .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#photo-section .slide-btn {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-size: 5rem;
+  background: none;
+  border: none;
+  transform: translateY(-50%) scaleX(-1);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0 1rem;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 2rem;
+}
+
+#photo-section .slide-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#photo-section #right-slider-btn {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=sassy.scss.map */
