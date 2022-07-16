@@ -9,10 +9,9 @@ const nav = document.querySelector(".header");
 const navItems = document.querySelectorAll(".nav-item");
 
 // Setting up slides. extra slides on the right
-slides.forEach(
-  (el, ind) =>
-    (el.style.transform = `translateX(${100 * (ind - currentSlide)}%)`)
-);
+slides.forEach((el, ind) => {
+  el.style.transform = `translateX(${100 * (ind - currentSlide)}%)`;
+});
 
 const showSlide = function (currentSlide) {
   slides.forEach(

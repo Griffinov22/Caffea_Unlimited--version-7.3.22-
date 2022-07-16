@@ -1,7 +1,12 @@
+$primary-clr: rgb(255, 177, 59);
+$secondar-clr: rgb(62, 98, 255);
+$ff-primary: "Major Mono Display", monospace;
+$ff-secondary: "Overpass Mono", monospace;
+
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Major Mono Display", monospace;
+  font-family: $ff-secondary;
 }
 
 nav {
@@ -24,6 +29,7 @@ nav #lion-photo {
 nav h1 {
   display: flex;
   align-items: center;
+  font-family: $ff-primary;
 }
 
 nav #ordered-nav {
@@ -41,6 +47,7 @@ nav #ordered-nav li a {
   text-decoration: none;
   color: black;
   transition: all 0.1s ease-in-out;
+  font-family: $ff-primary;
 }
 
 nav #ordered-nav a:hover {
@@ -51,9 +58,10 @@ nav #ordered-nav a:hover {
 
 #photo-section {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   padding: 0px;
+  overflow: hidden;
 
   #slider-caption {
     position: absolute;
@@ -67,6 +75,7 @@ nav #ordered-nav a:hover {
     color: white;
     opacity: 1;
     transition: opacity 2s;
+    font-family: $ff-primary;
   }
 }
 
@@ -74,7 +83,7 @@ nav #ordered-nav a:hover {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -114,6 +123,134 @@ nav #ordered-nav a:hover {
   transform: translateY(-50%);
 }
 
-/*# sourceMappingURL=style.css.map */
+#about-section {
+  width: 100%;
+  font-family: $ff-secondary;
+  background: url("/img/large-brick-background.jpg");
+  background-size: 100% 130%;
+  border-top: 8px solid grey;
+  color: white;
+  padding: 15vh 0;
+  text-shadow: 3px 3px black;
+
+  #about-h1 {
+    font-family: inherit;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    text-align: center;
+    font-size: 4rem;
+    width: 60vw;
+    font-weight: 700;
+  }
+
+  #flex-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    .about-img {
+      display: block;
+      min-width: 154px;
+      border-width: 2rem;
+      border-style: solid;
+      border-bottom: none;
+      border-left: none;
+      padding: 5vh;
+      border-image: linear-gradient(
+          to bottom right,
+          $primary-clr 50%,
+          $secondar-clr
+        )
+        1;
+    }
+    #right-img {
+      transform: scaleX(-1);
+    }
+    #about-p {
+      width: 40vw;
+      font-family: inherit;
+
+      font-size: 1.8rem;
+      width: 55vw;
+      text-align: center;
+      line-height: 3rem;
+      font-weight: 600;
+    }
+  }
+}
+
+#location-section {
+  width: 100%;
+  border-top: 8px solid grey;
+  padding: 15vh 0;
+
+  #location-caption {
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: $ff-primary;
+    font-weight: 700;
+    margin-bottom: 15vh;
+  }
+
+  #flex-location-div {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    .location-item {
+      border: 5px solid black !important;
+      border-radius: 5%;
+    }
+
+    #hours-div {
+      width: 500px;
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+      font-size: 1.5rem;
+      font-variant: small-caps;
+      font-weight: 500;
+
+      #hours-caption {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 1.7rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      .skewed-bg {
+        padding: 5px 0px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          white 5%,
+          $primary-clr 5%,
+          $primary-clr 95%,
+          white 95%
+        );
+
+        p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+#bottom-nav {
+  width: 100%;
+  height: 20vh;
+  border-top: 8px solid grey;
+  background-color: darkblue;
+}
 
 /*# sourceMappingURL=sassy.scss.map */

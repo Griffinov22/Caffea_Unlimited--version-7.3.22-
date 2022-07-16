@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Major Mono Display", monospace;
+  font-family: "Overpass Mono", monospace;
 }
 
 nav {
@@ -24,6 +24,7 @@ nav #lion-photo {
 nav h1 {
   display: flex;
   align-items: center;
+  font-family: "Major Mono Display", monospace;
 }
 
 nav #ordered-nav {
@@ -41,6 +42,7 @@ nav #ordered-nav li a {
   text-decoration: none;
   color: black;
   transition: all 0.1s ease-in-out;
+  font-family: "Major Mono Display", monospace;
 }
 
 nav #ordered-nav a:hover {
@@ -51,9 +53,10 @@ nav #ordered-nav a:hover {
 
 #photo-section {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   padding: 0px;
+  overflow: hidden;
 }
 #photo-section #slider-caption {
   position: absolute;
@@ -67,13 +70,14 @@ nav #ordered-nav a:hover {
   color: white;
   opacity: 1;
   transition: opacity 2s;
+  font-family: "Major Mono Display", monospace;
 }
 
 #photo-section .slide {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -113,7 +117,116 @@ nav #ordered-nav a:hover {
   transform: translateY(-50%);
 }
 
-/*# sourceMappingURL=style.css.map */
+#about-section {
+  width: 100%;
+  font-family: "Overpass Mono", monospace;
+  background: url("/img/large-brick-background.jpg");
+  background-size: 100% 130%;
+  border-top: 8px solid grey;
+  color: white;
+  padding: 15vh 0;
+  text-shadow: 3px 3px black;
+}
+#about-section #about-h1 {
+  font-family: inherit;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  text-align: center;
+  font-size: 4rem;
+  width: 60vw;
+  font-weight: 700;
+}
+#about-section #flex-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#about-section #flex-div .about-img {
+  display: block;
+  min-width: 154px;
+  border-width: 2rem;
+  border-style: solid;
+  border-bottom: none;
+  border-left: none;
+  padding: 5vh;
+  border-image: linear-gradient(to bottom right, rgb(255, 177, 59) 50%, rgb(62, 98, 255)) 1;
+}
+#about-section #flex-div #right-img {
+  transform: scaleX(-1);
+}
+#about-section #flex-div #about-p {
+  width: 40vw;
+  font-family: inherit;
+  font-size: 1.8rem;
+  width: 55vw;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+#location-section {
+  width: 100%;
+  border-top: 8px solid grey;
+  padding: 15vh 0;
+}
+#location-section #location-caption {
+  width: 40vw;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 700;
+  margin-bottom: 15vh;
+}
+#location-section #flex-location-div {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#location-section #flex-location-div .location-item {
+  border: 5px solid black !important;
+  border-radius: 5%;
+}
+#location-section #flex-location-div #hours-div {
+  width: 500px;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  font-weight: 500;
+}
+#location-section #flex-location-div #hours-div #hours-caption {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+#location-section #flex-location-div #hours-div .skewed-bg {
+  padding: 5px 0px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, white 5%, rgb(255, 177, 59) 5%, rgb(255, 177, 59) 95%, white 95%);
+}
+#location-section #flex-location-div #hours-div .skewed-bg p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bottom-nav {
+  width: 100%;
+  height: 20vh;
+  border-top: 8px solid grey;
+  background-color: darkblue;
+}
+
 /*# sourceMappingURL=sassy.scss.map */
 
 /*# sourceMappingURL=style.css.map */
