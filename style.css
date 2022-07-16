@@ -120,21 +120,26 @@ nav #ordered-nav a:hover {
 #about-section {
   width: 100%;
   font-family: "Overpass Mono", monospace;
-  background: url("/img/large-brick-background.jpg");
+  background: url("/img/city-bg-black-and-white.jpg");
+  object-fit: fill;
   background-size: 100% 130%;
   border-top: 8px solid grey;
   color: white;
   padding: 15vh 0;
-  text-shadow: 3px 3px black;
+  text-shadow: 2px 3px rgb(32, 39, 53);
+  color: rgb(255, 177, 59);
 }
 #about-section #about-h1 {
   font-family: inherit;
   margin: 0 auto;
   margin-bottom: 6rem;
+  padding: 2vh 0;
   text-align: center;
   font-size: 4rem;
   width: 60vw;
   font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: -15px 15px rgb(32, 39, 53);
 }
 #about-section #flex-div {
   width: 100%;
@@ -150,19 +155,24 @@ nav #ordered-nav a:hover {
   border-bottom: none;
   border-left: none;
   padding: 5vh;
-  border-image: linear-gradient(to bottom right, rgb(255, 177, 59) 50%, rgb(62, 98, 255)) 1;
+  border-radius: 5%;
+  background-color: rgb(62, 98, 255);
+  border-image: linear-gradient(to bottom right, rgb(32, 39, 53), rgb(255, 177, 59) 10% 80%, rgb(32, 39, 53)) 1;
 }
 #about-section #flex-div #right-img {
   transform: scaleX(-1);
 }
 #about-section #flex-div #about-p {
   width: 40vw;
+  padding: 2vh 2vh;
   font-family: inherit;
   font-size: 1.8rem;
   width: 55vw;
   text-align: center;
   line-height: 3rem;
   font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: -15px 15px rgb(32, 39, 53);
 }
 
 #location-section {
@@ -222,9 +232,28 @@ nav #ordered-nav a:hover {
 
 #bottom-nav {
   width: 100%;
-  height: 20vh;
   border-top: 8px solid grey;
-  background-color: darkblue;
+  background-color: rgb(32, 39, 53);
+}
+#bottom-nav #bottom-list {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 5vh 0;
+  text-align: center;
+  list-style-type: none;
+  font-size: 1rem;
+}
+#bottom-nav #bottom-list a {
+  color: rgb(255, 177, 59);
+  text-decoration: none;
+}
+#bottom-nav #bottom-list li {
+  margin-bottom: 1vh;
+  transition: transform ease-in 0.1s;
+}
+#bottom-nav #bottom-list li:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=sassy.scss.map */

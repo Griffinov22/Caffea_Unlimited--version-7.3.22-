@@ -1,5 +1,6 @@
 $primary-clr: rgb(255, 177, 59);
 $secondar-clr: rgb(62, 98, 255);
+$bottom-nav-clr: rgb(32, 39, 53);
 $ff-primary: "Major Mono Display", monospace;
 $ff-secondary: "Overpass Mono", monospace;
 
@@ -126,21 +127,27 @@ nav #ordered-nav a:hover {
 #about-section {
   width: 100%;
   font-family: $ff-secondary;
-  background: url("/img/large-brick-background.jpg");
+  background: url("/img/city-bg-black-and-white.jpg");
+  object-fit: fill;
   background-size: 100% 130%;
   border-top: 8px solid grey;
   color: white;
   padding: 15vh 0;
-  text-shadow: 3px 3px black;
+  text-shadow: 2px 3px $bottom-nav-clr;
+  color: $primary-clr;
 
   #about-h1 {
     font-family: inherit;
     margin: 0 auto;
     margin-bottom: 6rem;
+    padding: 2vh 0;
     text-align: center;
     font-size: 4rem;
     width: 60vw;
     font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    box-shadow: -15px 15px $bottom-nav-clr;
   }
 
   #flex-div {
@@ -156,10 +163,13 @@ nav #ordered-nav a:hover {
       border-bottom: none;
       border-left: none;
       padding: 5vh;
+      border-radius: 5%;
+      background-color: $secondar-clr;
       border-image: linear-gradient(
           to bottom right,
-          $primary-clr 50%,
-          $secondar-clr
+          $bottom-nav-clr,
+          $primary-clr 10% 80%,
+          $bottom-nav-clr
         )
         1;
     }
@@ -168,6 +178,8 @@ nav #ordered-nav a:hover {
     }
     #about-p {
       width: 40vw;
+      padding: 2vh 2vh;
+
       font-family: inherit;
 
       font-size: 1.8rem;
@@ -175,6 +187,8 @@ nav #ordered-nav a:hover {
       text-align: center;
       line-height: 3rem;
       font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: -15px 15px $bottom-nav-clr;
     }
   }
 }
@@ -248,9 +262,29 @@ nav #ordered-nav a:hover {
 
 #bottom-nav {
   width: 100%;
-  height: 20vh;
+
   border-top: 8px solid grey;
-  background-color: darkblue;
+  background-color: $bottom-nav-clr;
+  #bottom-list {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 5vh 0;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1rem;
+    a {
+      color: $primary-clr;
+      text-decoration: none;
+    }
+    li {
+      margin-bottom: 1vh;
+      transition: transform ease-in 0.1s;
+    }
+    li:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 /*# sourceMappingURL=sassy.scss.map */
